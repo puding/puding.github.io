@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <title><![CDATA[Black White SaySay]]></title>
+  <subtitle><![CDATA[一個隨意講講的地方]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://pdsay.github.io//"/>
+  <updated>2015-08-09T13:04:23.837Z</updated>
+  <id>http://pdsay.github.io//</id>
+  
+  <author>
+    <name><![CDATA[P.D.]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Github + Hexo 疑難雜症]]></title>
+    <link href="http://pdsay.github.io/2015/08/08/Github-Hexo-Blog-Q-A/"/>
+    <id>http://pdsay.github.io/2015/08/08/Github-Hexo-Blog-Q-A/</id>
+    <published>2015-08-08T14:04:27.000Z</published>
+    <updated>2015-08-09T13:04:23.837Z</updated>
+    <content type="html"><![CDATA[<h3 id="前言">前言</h3><p>這是利用 Github + Hexo 建立的 Blog，<br>以下內容是一位新手在建置此站過程中，受到打擊後的Mermer</p>
+<p>本篇會專門講述，所遇到的問題與解決方法，<br>參考的格式如下：<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">標題：問題  </span><br><span class="line">處理狀態：已解決<span class="comment">(發現新問題)</span>、研究中</span><br><span class="line">解決方法：</span><br></pre></td></tr></table></figure></p>
+<p><strong>有任何更好的方式或錯誤，歡迎分享告知:D</strong></p>
+<hr>
+<h3 id="1-_如何建立留言板">1. 如何建立留言板</h3><p><strong>處理狀態：已解決(發現新問題)</strong></p>
+<p>依目前自己搜尋到的結果主要大宗分兩種『多說』與『Disqus』，<br>本站選擇了『Disqus』</p>
+<p><strong>解決方法：</strong><br>做法：只要在Hexo設定檔<code>_config.yml</code>設定以下參數即可<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Disqus</span></span><br><span class="line"><span class="label">disqus_shortname:</span> pusay</span><br></pre></td></tr></table></figure></p>
+<p>但可能因為各家寫教學文時間點的關係，<br>在『Disqus』官網，我一直找不到shortname的存在阿阿阿阿阿!!!!((( 抱頭~~ My English is very poor )))<br>於是胡亂設定的結果，留言板就出現以下訊息： ( <strong>要上傳到Github才看的到喔</strong>，本機看不到 )<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">We were unable to load Disqus. If you are a moderator please see our troubleshooting guide.</span><br></pre></td></tr></table></figure></p>
+<p><strong>解決方法(續)：</strong><br>在<a href="https://disqus.com/" target="_blank" rel="external">Disqus</a>申請一組帳號後，直接進入<a href="https://disqus.com/admin/create/" target="_blank" rel="external">申請網站</a> ，申請一個<code>Site name</code>，它就是<code>disqus_shortname</code>要設定的值<br>請注意Site name設定之後，不能更改</p>
+<p>說明網址：<a href="https://help.disqus.com/customer/portal/articles/466208" target="_blank" rel="external">What’s a shortname?</a></p>
+<p><strong>發現新問題：更換主題，無法使用『Disqus』</strong></p>
+<hr>
+<h3 id="2-_快速發佈">2. 快速發佈</h3><p><strong>處理狀態：已解決</strong></p>
+<p>做任何動作(新增、修改、刪除 文章及設定)之後，都要再執行兩個指令，才能在本機預覽畫面。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">步驟</th>
+<th style="text-align:center">指令</th>
+<th style="text-align:left">簡碼</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">hexo generate</td>
+<td style="text-align:left">hexo g</td>
+<td style="text-align:left">產生靜態檔案至<code>public</code></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">hexo server</td>
+<td style="text-align:left">hexo s</td>
+<td style="text-align:left">啟動伺服器。使<code>127.0.0.1:4000</code>可以預覽Blog畫面</td>
+</tr>
+</tbody>
+</table>
+<p><strong>解決方法：</strong><br>因為這兩個步驟，會經常性使用，所以我會開兩個 git bash ( 或 git shell ) 視窗，常駐這兩個指令，如下：<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># 視窗1</span></span><br><span class="line"><span class="preprocessor"># hexo generate --watch</span></span><br><span class="line">hexo g -w</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># 視窗2</span></span><br><span class="line"><span class="preprocessor"># hexo server</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<p><code>hexo g -w</code>，這個指令，能監控檔案的任何異動，自動產生檔案至<code>public</code>，詳細可參考：<a href="https://hexo.io/zh-tw/docs/commands.html" target="_blank" rel="external">Hexo 指令說明</a></p>
+<p><strong>PS: 如果有更好的方式，再跟分享給我XD</strong></p>
+<hr>
+<h3 id="待解決的問題區">待解決的問題區</h3><p><strong>處理狀態：研究中</strong></p>
+<ol>
+<li>程式發佈會連結至Github，<code>hexo deploy</code></li>
+<li>更換版面樣式</li>
+<li>側邊顯示內文中的”子標題”</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="前言">前言</h3><p>這是利用 Github + Hexo 建立的 Blog，<br>以下內容是一位新手在建置此站過程中，受到打擊後的Mermer</p>
+<p>本篇會專門講述，所遇到的問題與解決方法，<br>參考的格式如下：<br><figure clas]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://pdsay.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>

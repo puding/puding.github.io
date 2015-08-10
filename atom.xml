@@ -4,9 +4,9 @@
   <title><![CDATA[Black White SaySay]]></title>
   <subtitle><![CDATA[一個隨意講講的地方]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://pdsay.github.io//"/>
+  <link href="http://puding.github.io//"/>
   <updated>2015-08-09T13:04:23.837Z</updated>
-  <id>http://pdsay.github.io//</id>
+  <id>http://puding.github.io//</id>
   
   <author>
     <name><![CDATA[P.D.]]></name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title><![CDATA[Github + Hexo 疑難雜症]]></title>
-    <link href="http://pdsay.github.io/2015/08/08/Github-Hexo-Blog-Q-A/"/>
-    <id>http://pdsay.github.io/2015/08/08/Github-Hexo-Blog-Q-A/</id>
+    <link href="http://puding.github.io/2015/08/08/Github-Hexo-Blog-Q-A/"/>
+    <id>http://puding.github.io/2015/08/08/Github-Hexo-Blog-Q-A/</id>
     <published>2015-08-08T14:04:27.000Z</published>
     <updated>2015-08-09T13:04:23.837Z</updated>
     <content type="html"><![CDATA[<h3 id="前言">前言</h3><p>這是利用 Github + Hexo 建立的 Blog，<br>以下內容是一位新手在建置此站過程中，受到打擊後的Mermer</p>
@@ -75,7 +75,7 @@
 <p>本篇會專門講述，所遇到的問題與解決方法，<br>參考的格式如下：<br><figure clas]]>
     </summary>
     
-      <category term="Hexo" scheme="http://pdsay.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://puding.github.io/tags/Hexo/"/>
     
   </entry>
   
